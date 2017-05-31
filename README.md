@@ -12,11 +12,15 @@ use GuzzleHttp\Client;
 
 $addresses = [
     [
-        'method' => 'GET',
-        'uti' => 'http://www.google.com',
-        'statusCode' => 200,
-        'options' => [],
-        'inBody' => 'Google'
+        'request' => [
+            'method' => 'GET',
+            'uti' => 'http://www.google.com',
+            'options' => [],
+        ],
+        'expectedResponse' => [
+            'statusCode' => 200,
+            'inBody' => 'Google'
+        ]
     ],
 ];
 
@@ -24,11 +28,11 @@ $result = [];
 $check = new Smoke(new Client());
 foreach ($addresses as $address) {
     $result[] = $check->checkAddress(
-        $address['method'],
-        $address['uri'],
-        $address['statusCode'],
-        $address['options'],
-        $address['inBody']
+        $address['request']['method'],
+        $address['request']['uri'],
+        $address['expectedResponse']['statusCode'],
+        $address['request']['options'],
+        $address['expectedResponse']['inBody']
     );
 }
 ```
