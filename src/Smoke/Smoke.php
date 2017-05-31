@@ -22,18 +22,14 @@ class Smoke
     {
         $check = $this->client->request($method, $uri, $options);
 
+        $result['uri'] = $uri;
+
         switch ($inBody) {
             case '':
-                $result = [
-                    'uri' => $uri,
-                    'status' => $this->checkOnlyStatusCode($check, $statusCode),
-                ];
+                $result['status'] = $this->checkOnlyStatusCode($check, $statusCode);
                 break;
             default:
-                $result = [
-                    'uri' => $uri,
-                    'status' => $this->checkStatusAndBodyContent($check, $statusCode, $inBody)
-                ];
+                $result['status'] = $this->checkStatusAndBodyContent($check, $statusCode, $inBody);
                 break;
         }
 

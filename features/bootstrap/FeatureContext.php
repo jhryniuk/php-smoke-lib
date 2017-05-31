@@ -44,7 +44,7 @@ class FeatureContext implements Context, SnippetAcceptingContext
     public function iCheckWithMethodAndContent($method, $statusCode, $content = '')
     {
         $this->method = $method;
-        $this->statusCode = (int)$statusCode;
+        $this->statusCode = (int) $statusCode;
         $this->content = $content;
     }
 
