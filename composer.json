@@ -1,0 +1,28 @@
+{
+  "name": "jhryniuk/php-smoke-lib",
+  "description": "This library allow to simplify smoke tests in php",
+  "type": "library",
+  "minimum-stability": "stable",
+  "config": {
+    "bin-dir": "bin"
+  },
+  "require": {
+    "guzzlehttp/guzzle": "~6.2.1"
+  },
+  "require-dev": {
+    "behat/behat": "3.3.*",
+    "bossa/phpspec2-expect": "2.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Smoke\\":"src"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jan Hryniuk",
+      "email": "jasiekhryniuk@gmail.com"
+    }
+  ]
+}
