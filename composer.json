@@ -7,7 +7,7 @@
     "bin-dir": "bin"
   },
   "require": {
-    "guzzlehttp/guzzle": "~6.2.1"
+    "guzzlehttp/guzzle": "~6.3"
   },
   "require-dev": {
     "behat/behat": "3.3.*",
