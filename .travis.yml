@@ -18,5 +18,4 @@ install:
   - composer install
   
 script:
-  - ls bin
-  - pwd
+  - bin/behat
