@@ -1,5 +1,7 @@
 # PHP Smoke Lib
 
+[![Build Status](https://travis-ci.org/jhryniuk/php-smoke-lib.svg?branch=master)](https://travis-ci.org/jhryniuk/php-smoke-lib)
+
 ### Description
 This library allows to run simple smoke tests in php
 
