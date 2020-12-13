@@ -18,4 +18,5 @@ install:
   - composer install
   
 script:
-  - vendor/bin/behat
+  - ls
+  - pwd
