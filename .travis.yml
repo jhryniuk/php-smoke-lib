@@ -18,5 +18,5 @@ install:
   - composer install
   
 script:
-  - ls
+  - ls bin
   - pwd
